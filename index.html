@@ -68,9 +68,17 @@
 <li><strong>Ce qui est enregistré</strong> dans Firebase (Google, serveurs en Europe, région europe-west1) : ton pseudo, ton identifiant TrackPadel aléatoire et une empreinte de ta clé, qui prouve que cet identifiant est le tien sans révéler la clé. Ces informations ne sont lisibles que par toi (ton pseudo sert seulement à vérifier qu'il est libre).</li>
 <li><strong>Ce qui n'y est pas</strong> : tes matchs, tes prénoms de joueurs, tes données santé ; ils restent sur tes appareils.</li>
 </ul>
+<h2>Calibration de la détection des frappes (facultatif)</h2>
+<p>Si tu as un compte et que tu actives « Aider à calibrer la détection des frappes » (Réglages &gt; Confidentialité, désactivé par défaut), chaque match terminé où ta montre a compté tes frappes est envoyé dans Firebase (Google, Europe) pour améliorer la détection :</p>
+<ul>
+<li><strong>Ce qui est envoyé</strong>, pour chaque point : le nombre de frappes et l'intensité mesurés par ta montre, la façon dont le point s'est terminé, qui l'a fait (toi, ton partenaire, un adversaire), si tu servais et si ton équipe l'a gagné ; plus la version de l'appli et le réglage du détecteur.</li>
+<li><strong>Ce qui n'est jamais envoyé</strong> : prénoms, heures, score détaillé, données santé.</li>
+<li>Ces envois sont rattachés à ton compte pour que tu puisses les effacer : <strong>désactiver l'option efface tous tes envois</strong>, comme la suppression du compte.</li>
+<li>Les réglages du détecteur peuvent être ajustés à distance (Firebase Remote Config), sans mise à jour de l'appli.</li>
+</ul>
 <h2>Supprimer ton compte</h2>
 <ul>
-<li><strong>Dans l'appli</strong> : Réglages &gt; Mon profil &gt; Supprimer mon compte. Ton compte, ton pseudo et l'empreinte de ta clé sont effacés immédiatement ; ton identité et tes matchs restent sur tes appareils.</li>
+<li><strong>Dans l'appli</strong> : Réglages &gt; Mon profil &gt; Supprimer mon compte. Ton compte, ton pseudo, l'empreinte de ta clé et tes envois de calibration sont effacés immédiatement ; ton identité et tes matchs restent sur tes appareils.</li>
 <li><strong>Sans l'appli</strong> : écris à <strong><a href="mailto:contact.trackpadel@gmail.com">contact.trackpadel@gmail.com</a></strong> depuis l'adresse de ton compte Google, avec l'objet « Supprimer mon compte ». Le compte et ses données sont effacés sous 30 jours, sans rien conserver.</li>
 </ul>
 <h2>Statistiques d'usage et rapports de plantage (facultatif)</h2>
@@ -139,9 +147,17 @@
 <li><strong>What is stored</strong> in Firebase (Google, servers in Europe, europe-west1 region): your nickname, your random TrackPadel identifier and a fingerprint of your key, which proves that this identifier is yours without revealing the key. Only you can read this information (your nickname is only used to check it is free).</li>
 <li><strong>What is not</strong>: your matches, player names, health data; they stay on your devices.</li>
 </ul>
+<h2>Shot detection calibration (optional)</h2>
+<p>If you have an account and turn on "Help calibrate shot detection" (Settings &gt; Privacy, off by default), each finished match in which your watch counted your shots is sent to Firebase (Google, Europe) to improve detection:</p>
+<ul>
+<li><strong>What is sent</strong>, for each point: the number of shots and the intensity measured by your watch, how the point ended, who made it (you, your partner, an opponent), whether you were serving and whether your team won it; plus the app version and the detector setting.</li>
+<li><strong>What is never sent</strong>: names, times, detailed scores, health data.</li>
+<li>These uploads are linked to your account so you can erase them: <strong>turning the option off erases everything you sent</strong>, as does deleting your account.</li>
+<li>Detector settings can be adjusted remotely (Firebase Remote Config), without an app update.</li>
+</ul>
 <h2>Delete your account</h2>
 <ul>
-<li><strong>In the app</strong>: Settings &gt; My profile &gt; Delete my account. Your account, nickname and key fingerprint are erased immediately; your identity and matches stay on your devices.</li>
+<li><strong>In the app</strong>: Settings &gt; My profile &gt; Delete my account. Your account, nickname, key fingerprint and calibration uploads are erased immediately; your identity and matches stay on your devices.</li>
 <li><strong>Without the app</strong>: email <strong><a href="mailto:contact.trackpadel@gmail.com">contact.trackpadel@gmail.com</a></strong> from your Google account address, with the subject "Delete my account". The account and its data are erased within 30 days, with nothing kept.</li>
 </ul>
 <h2>Usage statistics and crash reports (optional)</h2>
