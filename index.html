@@ -42,14 +42,24 @@
 <li><strong>Cardio et calories</strong> (si tu actives « Cardio et calories » sur la montre) : fréquence cardiaque, calories et durée de la séance, mesurées par ta montre pendant le match.</li>
 <li><strong>Frappes</strong> (si tu actives l'analyse personnelle) : la montre compte tes frappes à partir de son accéléromètre. Seuls le nombre de frappes et leur intensité maximale par point sont conservés.</li>
 <li><strong>Statut premium</strong> : le type d'achat et sa date d'expiration, pour débloquer les fonctions premium hors connexion.</li>
+<li><strong>Ton identité</strong> (« Mon profil ») : le prénom ou pseudo que tu choisis, et un identifiant aléatoire créé par l'appli sur ton téléphone. Ils te désignent dans tes matchs et quand tu rejoins la partie d'un autre joueur.</li>
 </ul>
-<p>TrackPadel n'utilise <strong>ni ta localisation, ni tes contacts, ni aucun identifiant publicitaire</strong>.</p>
+<p>TrackPadel ne lit <strong>jamais ta localisation</strong> et n'utilise <strong>ni tes contacts, ni aucun identifiant publicitaire</strong>. L'autorisation de localisation n'est demandée que pour jouer à plusieurs (voir plus bas).</p>
 <h2>Où vont ces données</h2>
 <ul>
 <li><strong>Entre ta montre et ton téléphone</strong>, par la liaison Wear OS de Google (Google Play services). Elle est directe en Bluetooth. Quand tes appareils ne sont pas à portée, Google peut la relayer par ses serveurs, de façon chiffrée.</li>
 <li><strong>Dans Health Connect</strong> (si tu l'actives, fonction premium) : les séances des matchs terminés, avec la fréquence cardiaque et les calories. D'autres applis santé que tu as autorisées, comme Samsung Health, peuvent alors les lire. TrackPadel ne lit rien dans Health Connect.</li>
 <li><strong>Sur ton Google Drive</strong> (si tu connectes la sauvegarde, fonction premium) : une copie de ton historique (matchs, prénoms, cardio et calories) dans un dossier privé réservé à TrackPadel, dans ton propre compte Google. L'appli n'a accès à rien d'autre sur ton Drive, et ses éditeurs n'ont pas accès à ta sauvegarde. L'adresse e-mail de ton compte ne sert qu'à l'afficher dans les réglages et reste sur ton téléphone.</li>
 <li><strong>Achats</strong> : ils sont traités par Google Play. TrackPadel ne reçoit jamais tes informations de paiement.</li>
+</ul>
+<h2>Match à plusieurs (facultatif)</h2>
+<p>Si tu invites d'autres joueurs à ton match, ou si tu rejoins le match d'un autre joueur, les téléphones se relient <strong>directement entre eux</strong> par Bluetooth et Wi-Fi (Nearby Connections, de Google Play services), sans Internet et sans serveur de TrackPadel :</p>
+<ul>
+<li><strong>Ce qui est échangé</strong> : le score et le déroulé du match, les prénoms des équipes, le prénom ou pseudo et l'identifiant aléatoire de chaque joueur qui rejoint, la façon dont les points se terminent et le nombre de frappes de chacun.</li>
+<li><strong>Ce qui n'est jamais échangé</strong> : tes données santé (cardio, calories), ton historique, ton adresse e-mail.</li>
+<li>Le match est protégé par un <strong>code à 4 chiffres</strong> affiché par celui qui invite ; sans le bon code, rien n'est envoyé. L'invitation s'arrête à la fin du match.</li>
+<li>Chaque joueur garde une copie du match dans son propre historique.</li>
+<li>Android demande pour cela l'autorisation « Appareils à proximité » et la <strong>localisation</strong> : le système en a besoin pour trouver les téléphones proches. TrackPadel ne lit, ne garde et n'envoie jamais ta position.</li>
 </ul>
 <h2>Statistiques d'usage et rapports de plantage (facultatif)</h2>
 <p>Au premier lancement, TrackPadel te demande si tu acceptes de l'aider à s'améliorer. Tant que tu n'as pas accepté, rien n'est envoyé. Si tu acceptes, sur ton téléphone et ta montre :</p>
@@ -64,6 +74,7 @@
 <ul>
 <li>Le cardio, les calories, l'analyse personnelle, l'enregistrement dans Health Connect et les statistiques d'usage sont <strong>facultatifs</strong> et se désactivent dans les réglages.</li>
 <li>Tu peux <strong>supprimer</strong> un match, plusieurs ou tout l'historique, et retirer un joueur du carnet.</li>
+<li>Tu peux changer ou effacer ton prénom dans Réglages &gt; Mon profil, et ne jamais inviter ni rejoindre de match à plusieurs.</li>
 <li>Tu peux retirer les autorisations dans les réglages Android ou dans Health Connect.</li>
 <li>Tu peux <strong>déconnecter Google Drive</strong> dans les réglages. Pour effacer la sauvegarde : Google Drive &gt; Paramètres &gt; Gérer les applications &gt; TrackPadel &gt; Supprimer les données cachées de l'appli.</li>
 <li>Désinstaller l'appli efface toutes ses données de tes appareils. Les séances déjà enregistrées dans Health Connect y restent, et tu peux les supprimer depuis Health Connect.</li>
@@ -90,14 +101,24 @@
 <li><strong>Heart rate and calories</strong> (if you turn on "Heart rate and calories" on the watch): heart rate, calories and session duration measured by your watch during the match.</li>
 <li><strong>Shots</strong> (if you turn on personal analysis): the watch counts your shots from its accelerometer. Only the number of shots and their peak intensity per point are kept.</li>
 <li><strong>Premium status</strong>: purchase type and expiry date, to unlock premium features offline.</li>
+<li><strong>Your identity</strong> ("My profile"): the name or nickname you choose, and a random identifier created by the app on your phone. They identify you in your matches and when you join another player's match.</li>
 </ul>
-<p>TrackPadel uses <strong>no location, no contacts and no advertising identifier</strong>.</p>
+<p>TrackPadel <strong>never reads your location</strong> and uses <strong>no contacts and no advertising identifier</strong>. The location permission is only requested to play with several players (see below).</p>
 <h2>Where the data goes</h2>
 <ul>
 <li><strong>Between your watch and phone</strong>, through Google's Wear OS link (Google Play services). It is direct over Bluetooth. When your devices are out of range, Google may relay it through its servers, encrypted.</li>
 <li><strong>To Health Connect</strong> (if you turn it on, premium feature): sessions of finished matches with heart rate and calories. Other health apps you have allowed, such as Samsung Health, can then read them. TrackPadel reads nothing from Health Connect.</li>
 <li><strong>To your Google Drive</strong> (if you connect backup, premium feature): a copy of your history (matches, first names, heart rate and calories) in a private folder reserved for TrackPadel, in your own Google account. The app cannot access anything else in your Drive, and its developers have no access to your backup. Your account email address is only used to show it in settings and stays on your phone.</li>
 <li><strong>Purchases</strong> are handled by Google Play. TrackPadel never receives your payment details.</li>
+</ul>
+<h2>Playing with several players (optional)</h2>
+<p>If you invite other players to your match, or join another player's match, the phones connect <strong>directly to each other</strong> over Bluetooth and Wi-Fi (Nearby Connections, from Google Play services), without Internet and without any TrackPadel server:</p>
+<ul>
+<li><strong>What is exchanged</strong>: the score and point-by-point record, the team players' first names, the name or nickname and random identifier of each player who joins, how points ended and each player's shot count.</li>
+<li><strong>What is never exchanged</strong>: your health data (heart rate, calories), your history, your email address.</li>
+<li>The match is protected by a <strong>4-digit code</strong> shown by the player who invites; without the right code, nothing is sent. Inviting stops when the match ends.</li>
+<li>Each player keeps a copy of the match in their own history.</li>
+<li>Android requires the "Nearby devices" and <strong>location</strong> permissions for this: the system needs them to find nearby phones. TrackPadel never reads, stores or sends your location.</li>
 </ul>
 <h2>Usage statistics and crash reports (optional)</h2>
 <p>On first launch, TrackPadel asks whether you agree to help improve it. Until you agree, nothing is sent. If you agree, on your phone and watch:</p>
@@ -112,6 +133,7 @@
 <ul>
 <li>Heart rate, calories, personal analysis, Health Connect and usage statistics are <strong>optional</strong> and can be turned off in settings.</li>
 <li>You can <strong>delete</strong> one match, several, or your whole history, and remove a player from the book.</li>
+<li>You can change or clear your name in Settings &gt; My profile, and never invite or join a match with several players.</li>
 <li>You can revoke permissions in Android settings or in Health Connect.</li>
 <li>You can <strong>disconnect Google Drive</strong> in settings. To erase the backup: Google Drive &gt; Settings &gt; Manage apps &gt; TrackPadel &gt; Delete hidden app data.</li>
 <li>Uninstalling the app erases all its data from your devices. Sessions already saved in Health Connect stay there, and you can delete them from Health Connect.</li>
