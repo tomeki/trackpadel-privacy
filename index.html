@@ -76,9 +76,16 @@
 <li>Ces envois sont rattachés à ton compte pour que tu puisses les effacer : <strong>désactiver l'option efface tous tes envois</strong>, comme la suppression du compte.</li>
 <li>Les réglages du détecteur peuvent être ajustés à distance (Firebase Remote Config), sans mise à jour de l'appli.</li>
 </ul>
-<h2>Supprimer ton compte</h2>
+<h2>Conseil du coach par IA (facultatif, premium)</h2>
+<p>Si tu as un compte et que tu touches « Demander un conseil » (écran Évolution), l'appli te demande d'abord ton accord, une seule fois. Ensuite, à chaque demande :</p>
 <ul>
-<li><strong>Dans l'appli</strong> : Réglages &gt; Mon profil &gt; Supprimer mon compte. Ton compte, ton pseudo, l'empreinte de ta clé et tes envois de calibration sont effacés immédiatement ; ton identité et tes matchs restent sur tes appareils.</li>
+<li><strong>Ce qui est envoyé</strong> : un résumé chiffré de tes matchs (tes constats, tes gagnants et fautes directes par set, par moment du set et par partenaire, tes derniers résultats), avec la langue de l'appli. Les partenaires n'y figurent que par leur rang, jamais par leur prénom.</li>
+<li><strong>Ce qui n'est jamais envoyé</strong> : prénoms, dates, score détaillé, données santé, adresse e-mail.</li>
+<li><strong>Le trajet</strong> : le résumé passe par une fonction TrackPadel hébergée par Google (Cloud Functions, Europe, région europe-west1), qui le transmet à <strong>Anthropic</strong> (États-Unis), fournisseur de l'IA Claude, pour rédiger le conseil. Anthropic agit comme sous-traitant : il ne conserve les données que le temps limité nécessaire au traitement et à la sécurité, et ne s'en sert pas pour entraîner ses modèles.</li>
+<li><strong>Ce qui est gardé</strong> : dans Firebase (Google, Europe), le nombre de conseils demandés ce mois-ci et le dernier conseil rédigé pour chaque résumé, rattachés à ton compte, pour appliquer le quota mensuel et ne pas refaire un conseil identique. Le dernier conseil reste aussi sur ton téléphone.</li>
+</ul>
+<ul>
+<li><strong>Dans l'appli</strong> : Réglages &gt; Mon profil &gt; Supprimer mon compte. Ton compte, ton pseudo, l'empreinte de ta clé, tes envois de calibration et tes conseils sont effacés immédiatement ; ton identité et tes matchs restent sur tes appareils.</li>
 <li><strong>Sans l'appli</strong> : écris à <strong><a href="mailto:contact.trackpadel@gmail.com">contact.trackpadel@gmail.com</a></strong> depuis l'adresse de ton compte Google, avec l'objet « Supprimer mon compte ». Le compte et ses données sont effacés sous 30 jours, sans rien conserver.</li>
 </ul>
 <h2>Statistiques d'usage et rapports de plantage (facultatif)</h2>
@@ -155,9 +162,16 @@
 <li>These uploads are linked to your account so you can erase them: <strong>turning the option off erases everything you sent</strong>, as does deleting your account.</li>
 <li>Detector settings can be adjusted remotely (Firebase Remote Config), without an app update.</li>
 </ul>
-<h2>Delete your account</h2>
+<h2>AI coach advice (optional, premium)</h2>
+<p>If you have an account and tap "Ask for advice" (Progress screen), the app first asks for your consent, once. Then, for each request:</p>
 <ul>
-<li><strong>In the app</strong>: Settings &gt; My profile &gt; Delete my account. Your account, nickname, key fingerprint and calibration uploads are erased immediately; your identity and matches stay on your devices.</li>
+<li><strong>What is sent</strong>: a numeric summary of your matches (your insights, your winners and unforced errors per set, per stage of the set and per partner, your latest results), with the app language. Partners only appear by rank, never by name.</li>
+<li><strong>What is never sent</strong>: names, dates, detailed scores, health data, email address.</li>
+<li><strong>The route</strong>: the summary goes through a TrackPadel function hosted by Google (Cloud Functions, Europe, europe-west1 region), which passes it to <strong>Anthropic</strong> (United States), the provider of the Claude AI, to write the advice. Anthropic acts as a processor: it keeps the data only for the limited time needed for processing and safety, and does not use it to train its models.</li>
+<li><strong>What is kept</strong>: in Firebase (Google, Europe), the number of pieces of advice requested this month and the last advice written for each summary, linked to your account, to enforce the monthly quota and avoid redoing identical advice. The latest advice also stays on your phone.</li>
+</ul>
+<ul>
+<li><strong>In the app</strong>: Settings &gt; My profile &gt; Delete my account. Your account, nickname, key fingerprint, calibration uploads and advice are erased immediately; your identity and matches stay on your devices.</li>
 <li><strong>Without the app</strong>: email <strong><a href="mailto:contact.trackpadel@gmail.com">contact.trackpadel@gmail.com</a></strong> from your Google account address, with the subject "Delete my account". The account and its data are erased within 30 days, with nothing kept.</li>
 </ul>
 <h2>Usage statistics and crash reports (optional)</h2>
