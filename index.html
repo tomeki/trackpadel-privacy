@@ -31,7 +31,7 @@
 <p>TrackPadel compte les points de tes matchs de padel sur ta montre Wear OS et ton téléphone Android. Cette page explique quelles données l'appli utilise, et ce qu'elle en fait.</p>
 <h2>En bref</h2>
 <ul>
-<li><strong>Pas de compte, pas de serveur, pas de publicité.</strong> Tes matchs, les prénoms et tes données santé ne sont jamais envoyés aux éditeurs de TrackPadel.</li>
+<li><strong>Pas de compte obligatoire, pas de publicité.</strong> Tes matchs, les prénoms et tes données santé ne sont jamais envoyés aux éditeurs de TrackPadel.</li>
 <li>Tes données restent <strong>sur ta montre et ton téléphone</strong>, et tu peux les supprimer à tout moment.</li>
 <li>Si tu l'acceptes, et seulement dans ce cas, l'appli envoie des <strong>statistiques d'usage et des rapports de plantage</strong> pour nous aider à l'améliorer. C'est refusé par défaut.</li>
 </ul>
@@ -60,6 +60,18 @@
 <li>Le match est protégé par un <strong>code à 4 chiffres</strong> affiché par celui qui invite ; sans le bon code, rien n'est envoyé. L'invitation s'arrête à la fin du match.</li>
 <li>Chaque joueur garde une copie du match dans son propre historique.</li>
 <li>Android demande pour cela l'autorisation « Appareils à proximité » et la <strong>localisation</strong> : le système en a besoin pour trouver les téléphones proches. TrackPadel ne lit, ne garde et n'envoie jamais ta position.</li>
+</ul>
+<h2>Compte TrackPadel (facultatif)</h2>
+<p>Tu peux créer un compte pour réserver un pseudo unique ; il servira aux fonctions à venir (calibration, conseils). Sans compte, l'appli fonctionne pareil.</p>
+<ul>
+<li><strong>Connexion</strong> : avec ton compte Google (Firebase Authentication, de Google). TrackPadel reçoit ton adresse e-mail et un identifiant de compte ; jamais ton mot de passe.</li>
+<li><strong>Ce qui est enregistré</strong> dans Firebase (Google, serveurs en Europe, région europe-west1) : ton pseudo, ton identifiant TrackPadel aléatoire et une empreinte de ta clé, qui prouve que cet identifiant est le tien sans révéler la clé. Ces informations ne sont lisibles que par toi (ton pseudo sert seulement à vérifier qu'il est libre).</li>
+<li><strong>Ce qui n'y est pas</strong> : tes matchs, tes prénoms de joueurs, tes données santé ; ils restent sur tes appareils.</li>
+</ul>
+<h2>Supprimer ton compte</h2>
+<ul>
+<li><strong>Dans l'appli</strong> : Réglages &gt; Mon profil &gt; Supprimer mon compte. Ton compte, ton pseudo et l'empreinte de ta clé sont effacés immédiatement ; ton identité et tes matchs restent sur tes appareils.</li>
+<li><strong>Sans l'appli</strong> : écris à <strong><a href="mailto:contact.trackpadel@gmail.com">contact.trackpadel@gmail.com</a></strong> depuis l'adresse de ton compte Google, avec l'objet « Supprimer mon compte ». Le compte et ses données sont effacés sous 30 jours, sans rien conserver.</li>
 </ul>
 <h2>Statistiques d'usage et rapports de plantage (facultatif)</h2>
 <p>Au premier lancement, TrackPadel te demande si tu acceptes de l'aider à s'améliorer. Tant que tu n'as pas accepté, rien n'est envoyé. Si tu acceptes, sur ton téléphone et ta montre :</p>
@@ -90,7 +102,7 @@
 <p>TrackPadel keeps score of your padel matches on your Wear OS watch and Android phone. This page explains what data the app uses and what it does with it.</p>
 <h2>In short</h2>
 <ul>
-<li><strong>No account, no server, no ads.</strong> Your matches, player names and health data are never sent to TrackPadel's developers.</li>
+<li><strong>No account required, no ads.</strong> Your matches, player names and health data are never sent to TrackPadel's developers.</li>
 <li>Your data stays <strong>on your watch and phone</strong>, and you can delete it at any time.</li>
 <li>If you agree, and only then, the app sends <strong>usage statistics and crash reports</strong> to help us improve it. This is off by default.</li>
 </ul>
@@ -119,6 +131,18 @@
 <li>The match is protected by a <strong>4-digit code</strong> shown by the player who invites; without the right code, nothing is sent. Inviting stops when the match ends.</li>
 <li>Each player keeps a copy of the match in their own history.</li>
 <li>Android requires the "Nearby devices" and <strong>location</strong> permissions for this: the system needs them to find nearby phones. TrackPadel never reads, stores or sends your location.</li>
+</ul>
+<h2>TrackPadel account (optional)</h2>
+<p>You can create an account to reserve a unique nickname; it will be used by upcoming features (calibration, tips). Without an account, the app works the same.</p>
+<ul>
+<li><strong>Sign-in</strong>: with your Google account (Firebase Authentication, from Google). TrackPadel receives your email address and an account identifier; never your password.</li>
+<li><strong>What is stored</strong> in Firebase (Google, servers in Europe, europe-west1 region): your nickname, your random TrackPadel identifier and a fingerprint of your key, which proves that this identifier is yours without revealing the key. Only you can read this information (your nickname is only used to check it is free).</li>
+<li><strong>What is not</strong>: your matches, player names, health data; they stay on your devices.</li>
+</ul>
+<h2>Delete your account</h2>
+<ul>
+<li><strong>In the app</strong>: Settings &gt; My profile &gt; Delete my account. Your account, nickname and key fingerprint are erased immediately; your identity and matches stay on your devices.</li>
+<li><strong>Without the app</strong>: email <strong><a href="mailto:contact.trackpadel@gmail.com">contact.trackpadel@gmail.com</a></strong> from your Google account address, with the subject "Delete my account". The account and its data are erased within 30 days, with nothing kept.</li>
 </ul>
 <h2>Usage statistics and crash reports (optional)</h2>
 <p>On first launch, TrackPadel asks whether you agree to help improve it. Until you agree, nothing is sent. If you agree, on your phone and watch:</p>
