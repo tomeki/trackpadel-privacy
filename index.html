@@ -16,6 +16,7 @@
   h1 { font-size: 1.6rem; line-height: 1.25; margin: 24px 0 8px; }
   h1::before { content: ""; display: inline-block; width: 14px; height: 14px; border-radius: 50%; background: var(--ball); margin-right: 10px; vertical-align: middle; }
   h2 { font-size: 1.1rem; margin: 28px 0 6px; }
+  h3 { font-size: 1rem; margin: 20px 0 4px; }
   p, li { color: var(--ink); }
   em { color: var(--muted); }
   a { color: inherit; }
@@ -27,7 +28,7 @@
 <nav><a href="#fr">Français</a><a href="#en">English</a></nav>
 <section id="fr" lang="fr">
 <h1>Politique de confidentialité — TrackPadel</h1>
-<p><em>Dernière mise à jour : 5 octobre 2026</em></p>
+<p><em>Dernière mise à jour : 7 octobre 2026</em></p>
 <p>TrackPadel compte les points de tes matchs de padel sur ta montre Wear OS et ton téléphone Android. Cette page explique quelles données l'appli utilise, et ce qu'elle en fait.</p>
 <h2>En bref</h2>
 <ul>
@@ -40,7 +41,7 @@
 <li><strong>Matchs</strong> : scores, déroulé des points, format, durée, et si tu les précises, la façon dont les points se terminent.</li>
 <li><strong>Prénoms des joueurs</strong> que tu saisis dans le carnet, pour composer les équipes.</li>
 <li><strong>Cardio et calories</strong> (si tu actives « Cardio et calories » sur la montre) : fréquence cardiaque, calories et durée de la séance, mesurées par ta montre pendant le match.</li>
-<li><strong>Frappes</strong> (si tu actives l'analyse personnelle) : la montre compte tes frappes à partir de son accéléromètre. Seuls le nombre de frappes et leur intensité maximale par point sont conservés.</li>
+<li><strong>Frappes et déplacements</strong> (si tu actives l'analyse personnelle) : la montre analyse ses capteurs de mouvement (accéléromètre, gyroscope, gravité, podomètre) pendant le match. Seuls des résumés sont conservés, point par point : pour chaque frappe, son heure, son intensité, la vitesse de rotation du poignet et l'inclinaison de l'avant-bras ; et le nombre de pas et de sauts. Aucun signal brut n'est gardé.</li>
 <li><strong>Statut premium</strong> : le type d'achat et sa date d'expiration, pour débloquer les fonctions premium hors connexion.</li>
 <li><strong>Ton identité</strong> (« Mon profil ») : le prénom ou pseudo que tu choisis, et un identifiant aléatoire créé par l'appli sur ton téléphone. Ils te désignent dans tes matchs et quand tu rejoins la partie d'un autre joueur.</li>
 </ul>
@@ -67,6 +68,22 @@
 <li><strong>Connexion</strong> : avec ton compte Google (Firebase Authentication, de Google). TrackPadel reçoit ton adresse e-mail et un identifiant de compte ; jamais ton mot de passe.</li>
 <li><strong>Ce qui est enregistré</strong> dans Firebase (Google, serveurs en Europe, région europe-west1) : ton pseudo, ton identifiant TrackPadel aléatoire et une empreinte de ta clé, qui prouve que cet identifiant est le tien sans révéler la clé. Ces informations ne sont lisibles que par toi (ton pseudo sert seulement à vérifier qu'il est libre).</li>
 <li><strong>Ce qui n'y est pas</strong> : tes matchs, tes prénoms de joueurs, tes données santé ; ils restent sur tes appareils.</li>
+</ul>
+<h3>Amis et invitations (avec un compte)</h3>
+<ul>
+<li><strong>Ce que voient tes amis</strong> : ton pseudo et ton identifiant TrackPadel (celui qui circule déjà dans les matchs à plusieurs). Les comptes avec qui tu échanges une demande d'ami les voient aussi. Personne d'autre ne peut lister les joueurs ni lire ta liste d'amis.</li>
+<li><strong>Ce qui est enregistré</strong> dans Firestore (europe-west1) : ta liste d'amis, les demandes en cours, et les invitations à un match (code du match et identifiant de la session, lisibles par l'hôte et l'invité seulement, effacées au bout de 3 heures).</li>
+<li><strong>Notifications</strong> : pour t'avertir d'une demande d'ami ou d'une invitation, un jeton de notification de ton téléphone (Firebase Cloud Messaging, de Google) est enregistré avec ton compte. Il est effacé quand tu te déconnectes ou supprimes ton compte. Tu peux refuser les notifications : les demandes restent visibles dans l'appli.</li>
+<li><strong>Suppression</strong> : supprimer ton compte retire aussi tes amitiés (des deux côtés), tes demandes, tes invitations et tes jetons de notification.</li>
+</ul>
+<h2>Lieu des matchs (facultatif)</h2>
+<p>Désactivé par défaut (Réglages &gt; Confidentialité &gt; Lieu des matchs).</p>
+<ul>
+<li><strong>Ce qui est relevé</strong> : une position approximative de ton téléphone, une seule fois par match (au premier point). Aucun suivi pendant le match ; la montre n'est pas utilisée.</li>
+<li><strong>Où elle va</strong> : sur ton téléphone, dans « Mes lieux » (nom du club, position moyenne de tes matchs là-bas, adresse). Le match ne garde que le nom du lieu ; c'est aussi tout ce que reçoivent les autres joueurs d'un match à plusieurs. Les lieux sont inclus dans ta sauvegarde Google Drive si tu l'as activée.</li>
+<li><strong>Google</strong> : pour afficher la carte du lieu et proposer des noms de clubs pendant que tu tapes, la position du club et le texte tapé sont envoyés à Google Maps Platform. TrackPadel ne garde de Google que l'identifiant du lieu.</li>
+<li><strong>Carte des clubs TrackPadel (option distincte, compte requis, désactivée par défaut)</strong> : si tu l'actives, le nom et la position des clubs où tu joues sont envoyés à notre base (Firebase, europe-west1) pour proposer ces clubs aux autres joueurs. Aucune information sur toi n'y est enregistrée : ni ton compte, ni la date, ni qui a joué. On ne peut pas en retirer « tes » contributions puisqu'elles ne te sont pas rattachées.</li>
+<li><strong>Partage</strong> : le lieu n'apparaît dans un résultat partagé que si tu actives « Lieu du match » dans la fenêtre de partage.</li>
 </ul>
 <h2>Calibration de la détection des frappes (facultatif)</h2>
 <p>Si tu as un compte et que tu actives « Aider à calibrer la détection des frappes » (Réglages &gt; Confidentialité, désactivé par défaut), chaque match terminé où ta montre a compté tes frappes est envoyé dans Firebase (Google, Europe) pour améliorer la détection :</p>
@@ -113,7 +130,7 @@
 </section>
 <section id="en" lang="en">
 <h1>Privacy policy — TrackPadel</h1>
-<p><em>Last updated: 5 October 2026</em></p>
+<p><em>Last updated: 7 October 2026</em></p>
 <p>TrackPadel keeps score of your padel matches on your Wear OS watch and Android phone. This page explains what data the app uses and what it does with it.</p>
 <h2>In short</h2>
 <ul>
@@ -126,7 +143,7 @@
 <li><strong>Matches</strong>: scores, point-by-point record, format, duration and, if you add them, how points ended.</li>
 <li><strong>Player first names</strong> you enter in the player book to build teams.</li>
 <li><strong>Heart rate and calories</strong> (if you turn on "Heart rate and calories" on the watch): heart rate, calories and session duration measured by your watch during the match.</li>
-<li><strong>Shots</strong> (if you turn on personal analysis): the watch counts your shots from its accelerometer. Only the number of shots and their peak intensity per point are kept.</li>
+<li><strong>Shots and movement</strong> (if you turn on personal analysis): the watch analyses its motion sensors (accelerometer, gyroscope, gravity, step counter) during the match. Only summaries are kept, point by point: for each shot, its time, intensity, wrist rotation speed and forearm tilt; and the number of steps and jumps. No raw signal is kept.</li>
 <li><strong>Premium status</strong>: purchase type and expiry date, to unlock premium features offline.</li>
 <li><strong>Your identity</strong> ("My profile"): the name or nickname you choose, and a random identifier created by the app on your phone. They identify you in your matches and when you join another player's match.</li>
 </ul>
@@ -153,6 +170,22 @@
 <li><strong>Sign-in</strong>: with your Google account (Firebase Authentication, from Google). TrackPadel receives your email address and an account identifier; never your password.</li>
 <li><strong>What is stored</strong> in Firebase (Google, servers in Europe, europe-west1 region): your nickname, your random TrackPadel identifier and a fingerprint of your key, which proves that this identifier is yours without revealing the key. Only you can read this information (your nickname is only used to check it is free).</li>
 <li><strong>What is not</strong>: your matches, player names, health data; they stay on your devices.</li>
+</ul>
+<h3>Friends and invitations (with an account)</h3>
+<ul>
+<li><strong>What your friends see</strong>: your nickname and your TrackPadel identifier (the one already shared in multi-player matches). Accounts you exchange a friend request with see them too. Nobody else can list players or read your friends list.</li>
+<li><strong>What is stored</strong> in Firestore (europe-west1): your friends list, pending requests, and match invitations (match code and session identifier, readable only by the host and the invited player, erased after 3 hours).</li>
+<li><strong>Notifications</strong>: to tell you about a friend request or an invitation, a notification token of your phone (Firebase Cloud Messaging, from Google) is stored with your account. It is erased when you sign out or delete your account. You can refuse notifications: requests stay visible in the app.</li>
+<li><strong>Deletion</strong>: deleting your account also removes your friendships (on both sides), your requests, your invitations and your notification tokens.</li>
+</ul>
+<h2>Match location (optional)</h2>
+<p>Off by default (Settings &gt; Privacy &gt; Match location).</p>
+<ul>
+<li><strong>What is collected</strong>: an approximate location of your phone, once per match (at the first point). No tracking during the match; the watch is not used.</li>
+<li><strong>Where it goes</strong>: on your phone, in "My places" (club name, average position of your matches there, address). The match only keeps the place name; that is also all the other players of a multi-player match receive. Places are included in your Google Drive backup if you turned it on.</li>
+<li><strong>Google</strong>: to show the place map and suggest club names while you type, the club position and the typed text are sent to Google Maps Platform. TrackPadel only keeps Google's place identifier.</li>
+<li><strong>TrackPadel club map (separate option, account required, off by default)</strong>: if you turn it on, the name and position of the clubs where you play are sent to our database (Firebase, europe-west1) to suggest these clubs to other players. Nothing about you is stored there: no account, no date, nobody who played. Your contributions cannot be removed on request since they are not linked to you.</li>
+<li><strong>Sharing</strong>: the place only appears in a shared result if you turn on "Match location" in the share window.</li>
 </ul>
 <h2>Shot detection calibration (optional)</h2>
 <p>If you have an account and turn on "Help calibrate shot detection" (Settings &gt; Privacy, off by default), each finished match in which your watch counted your shots is sent to Firebase (Google, Europe) to improve detection:</p>
