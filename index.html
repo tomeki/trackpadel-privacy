@@ -58,7 +58,7 @@
 <ul>
 <li><strong>Ce qui est échangé</strong> : le score et le déroulé du match, les prénoms des équipes, le prénom ou pseudo et l'identifiant aléatoire de chaque joueur qui rejoint, la façon dont les points se terminent et le nombre de frappes de chacun.</li>
 <li><strong>Ce qui n'est jamais échangé</strong> : tes données santé (cardio, calories), ton historique, ton adresse e-mail.</li>
-<li>Le match est protégé par un <strong>code à 4 chiffres</strong> affiché par celui qui invite ; sans le bon code, rien n'est envoyé. L'invitation s'arrête à la fin du match.</li>
+<li>Le match est protégé par un <strong>code à 4 chiffres</strong> affiché par celui qui invite ; sans le bon code, rien n'est envoyé. L'invitation s'arrête dix minutes après la fin du match, pour qu'une revanche continue avec les mêmes joueurs.</li>
 <li>Chaque joueur garde une copie du match dans son propre historique.</li>
 <li>Android demande pour cela l'autorisation « Appareils à proximité » et la <strong>localisation</strong> : le système en a besoin pour trouver les téléphones proches. TrackPadel ne lit, ne garde et n'envoie jamais ta position.</li>
 </ul>
@@ -79,7 +79,7 @@
 </ul>
 <h3>Envoyer à un ami les matchs joués ensemble (avec un compte)</h3>
 <ul>
-<li>Quand tu relies un joueur de ton carnet au compte d'un ami, tu peux lui envoyer les matchs que vous avez joués ensemble. Rien ne part sans ton geste.</li>
+<li>Quand tu relies un joueur de ton carnet au compte d'un ami, tu peux lui envoyer les matchs que vous avez joués ensemble. Rien ne part sans ton geste, sauf dans un cas : quand un ami a rejoint ton match par l'invitation, ce match lui est envoyé automatiquement à la fin, et s'ajoute directement à son historique (au cas où la fin ne lui serait pas parvenue en direct).</li>
 <li><strong>Ce qui part</strong> : la composition des équipes (prénoms et identifiants publics des joueurs), le score point par point, la fin des points (gagnant, faute, ace…), le nom du lieu et la date. <strong>Ne partent jamais</strong> : ton cardio, tes calories, les frappes et mouvements mesurés par ta montre, ni la position GPS du lieu.</li>
 <li><strong>Où</strong> : dans Firestore (europe-west1), lisible par toi et ton ami seulement, le temps qu'il réponde. Les matchs sont effacés dès qu'il les ajoute ou les refuse, et au plus tard au bout de 30 jours.</li>
 <li><strong>Chez ton ami</strong>, les matchs ajoutés deviennent les siens : ils restent sur son téléphone (et sa sauvegarde, s'il en a une), comme ses autres matchs.</li>
@@ -169,7 +169,7 @@
 <ul>
 <li><strong>What is exchanged</strong>: the score and point-by-point record, the team players' first names, the name or nickname and random identifier of each player who joins, how points ended and each player's shot count.</li>
 <li><strong>What is never exchanged</strong>: your health data (heart rate, calories), your history, your email address.</li>
-<li>The match is protected by a <strong>4-digit code</strong> shown by the player who invites; without the right code, nothing is sent. Inviting stops when the match ends.</li>
+<li>The match is protected by a <strong>4-digit code</strong> shown by the player who invites; without the right code, nothing is sent. Inviting stops ten minutes after the match ends, so that a rematch continues with the same players.</li>
 <li>Each player keeps a copy of the match in their own history.</li>
 <li>Android requires the "Nearby devices" and <strong>location</strong> permissions for this: the system needs them to find nearby phones. TrackPadel never reads, stores or sends your location.</li>
 </ul>
@@ -190,7 +190,7 @@
 </ul>
 <h3>Sending a friend the matches you played together (with an account)</h3>
 <ul>
-<li>When you link a player of your book to a friend's account, you can send them the matches you played together. Nothing is sent unless you choose to.</li>
+<li>When you link a player of your book to a friend's account, you can send them the matches you played together. Nothing is sent unless you choose to, with one exception: when a friend joined your match through the invitation, that match is sent to them automatically when it ends and goes straight into their history (in case the end did not reach them live).</li>
 <li><strong>What is sent</strong>: the team line-up (first names and public identifiers of the players), the point-by-point score, how points ended (winner, error, ace…), the place name and the date. <strong>Never sent</strong>: your heart rate, calories, the shots and movements measured by your watch, or the GPS position of the place.</li>
 <li><strong>Where</strong>: in Firestore (europe-west1), readable only by you and your friend while they answer. The matches are erased as soon as they add or decline them, and after 30 days at the latest.</li>
 <li><strong>On your friend's phone</strong>, added matches become theirs: they stay on their phone (and in their backup, if any), like their other matches.</li>
