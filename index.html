@@ -28,7 +28,7 @@
 <nav><a href="#fr">Français</a><a href="#en">English</a></nav>
 <section id="fr" lang="fr">
 <h1>Politique de confidentialité — TrackPadel</h1>
-<p><em>Dernière mise à jour : 7 octobre 2026</em></p>
+<p><em>Dernière mise à jour : 9 octobre 2026</em></p>
 <p>TrackPadel compte les points de tes matchs de padel sur ta montre Wear OS et ton téléphone Android. Cette page explique quelles données l'appli utilise, et ce qu'elle en fait.</p>
 <h2>En bref</h2>
 <ul>
@@ -75,7 +75,7 @@
 <li><strong>Ce que voient tes amis</strong> : ton pseudo, ta photo de profil si tu en as une, et ton identifiant TrackPadel (celui qui circule déjà dans les matchs à plusieurs). Les comptes avec qui tu échanges une demande d'ami les voient aussi. Personne d'autre ne peut lister les joueurs ni lire ta liste d'amis.</li>
 <li><strong>Ce qui est enregistré</strong> dans Firestore (europe-west1) : ta liste d'amis, les demandes en cours, et les invitations à un match (code du match et identifiant de la session, lisibles par l'hôte et l'invité seulement, effacées au bout de 3 heures).</li>
 <li><strong>Notifications</strong> : pour t'avertir d'une demande d'ami ou d'une invitation, un jeton de notification de ton téléphone (Firebase Cloud Messaging, de Google) est enregistré avec ton compte. Il est effacé quand tu te déconnectes ou supprimes ton compte. Tu peux refuser les notifications : les demandes restent visibles dans l'appli.</li>
-<li><strong>Suppression</strong> : supprimer ton compte retire aussi tes amitiés (des deux côtés), tes demandes, tes invitations, les matchs envoyés ou reçus en attente, tes jetons de notification et ta photo de profil.</li>
+<li><strong>Suppression</strong> : supprimer ton compte retire aussi tes amitiés (des deux côtés), tes demandes, tes invitations, les matchs envoyés ou reçus en attente (y compris ceux envoyés à un joueur sans TrackPadel), tes jetons de notification et ta photo de profil.</li>
 <li><strong>Bloquer un compte</strong> : depuis la liste d'amis ou une demande reçue. Vous n'êtes plus amis, et ce compte ne peut plus t'envoyer de demande, d'invitation ni de match ; il n'en est pas averti. La liste de tes comptes bloqués (pseudo et photo, pour les reconnaître) est enregistrée avec ton compte, lisible par toi seul, et tu peux les débloquer à tout moment (Amis &gt; ⋮ &gt; Comptes bloqués).</li>
 <li><strong>Signaler un compte</strong> (pseudo offensant, photo inappropriée, harcèlement) : le signalement (ton identifiant de compte, celui du compte signalé, son pseudo et sa photo à ce moment, le motif et la date) est enregistré pour que l'équipe TrackPadel l'examine ; le compte signalé ne sait pas qui l'a signalé. Il est effacé une fois traité, au plus tard un an après. Les pseudos injurieux sont refusés à la création du compte et au changement de pseudo.</li>
 </ul>
@@ -85,6 +85,14 @@
 <li><strong>Ce qui part</strong> : la composition des équipes (prénoms et identifiants publics des joueurs), le score point par point, la fin des points (gagnant, faute, ace…), le nom du lieu et la date. <strong>Ne partent jamais</strong> : ton cardio, tes calories, les frappes et mouvements mesurés par ta montre, ni la position GPS du lieu.</li>
 <li><strong>Où</strong> : dans Firestore (europe-west1), lisible par toi et ton ami seulement, le temps qu'il réponde. Les matchs sont effacés dès qu'il les ajoute ou les refuse, et au plus tard au bout de 30 jours.</li>
 <li><strong>Chez ton ami</strong>, les matchs ajoutés deviennent les siens : ils restent sur son téléphone (et sa sauvegarde, s'il en a une), comme ses autres matchs.</li>
+</ul>
+<h3>Envoyer ses stats à un joueur qui n'a pas TrackPadel (avec un compte)</h3>
+<ul>
+<li>Après un match, tu peux envoyer à un joueur du match qui n'a pas l'appli un lien vers ce match (par la messagerie de ton choix). Rien ne part sans ton geste.</li>
+<li><strong>Ce qui part</strong> : comme pour un ami, la composition des équipes (prénoms, identifiants publics des joueurs qui en ont un), le score point par point, la fin des points, le nom du lieu et la date, ainsi que ton pseudo et ton identifiant public. <strong>Ne partent jamais</strong> : ton cardio, tes calories, les frappes et mouvements mesurés par ta montre, ni la position GPS du lieu.</li>
+<li><strong>Où</strong> : dans Firestore (europe-west1), sous un lien secret impossible à deviner. <strong>Toute personne qui a le lien peut voir ce match</strong>, sans compte : ne l'envoie qu'au joueur concerné. Le match est effacé dès que le joueur l'ajoute à son historique, et au plus tard au bout de 30 jours (il ne reste alors que le fait qu'il a été envoyé et récupéré, effacé aussi au bout de 30 jours).</li>
+<li><strong>Le lien</strong> ouvre une page web (trackpadel.web.app) qui ne mesure rien et ne garde rien, puis l'appli ou Google Play. Si le joueur installe l'appli, Google Play lui transmet le lien au premier lancement : son appli lui propose le match, qu'il ajoute ou ignore.</li>
+<li><strong>Tu es prévenu</strong> quand le joueur a ajouté le match. Son appli retient ton identifiant public (parrainage).</li>
 </ul>
 <h2>Lieu des matchs (facultatif)</h2>
 <p>Désactivé par défaut (Réglages &gt; Confidentialité &gt; Lieu des matchs).</p>
@@ -141,7 +149,7 @@
 </section>
 <section id="en" lang="en">
 <h1>Privacy policy — TrackPadel</h1>
-<p><em>Last updated: 7 October 2026</em></p>
+<p><em>Last updated: 9 October 2026</em></p>
 <p>TrackPadel keeps score of your padel matches on your Wear OS watch and Android phone. This page explains what data the app uses and what it does with it.</p>
 <h2>In short</h2>
 <ul>
@@ -188,7 +196,7 @@
 <li><strong>What your friends see</strong>: your nickname, your profile photo if you have one, and your TrackPadel identifier (the one already shared in multi-player matches). Accounts you exchange a friend request with see them too. Nobody else can list players or read your friends list.</li>
 <li><strong>What is stored</strong> in Firestore (europe-west1): your friends list, pending requests, and match invitations (match code and session identifier, readable only by the host and the invited player, erased after 3 hours).</li>
 <li><strong>Notifications</strong>: to tell you about a friend request or an invitation, a notification token of your phone (Firebase Cloud Messaging, from Google) is stored with your account. It is erased when you sign out or delete your account. You can refuse notifications: requests stay visible in the app.</li>
-<li><strong>Deletion</strong>: deleting your account also removes your friendships (on both sides), your requests, your invitations, pending sent or received matches, your notification tokens and your profile photo.</li>
+<li><strong>Deletion</strong>: deleting your account also removes your friendships (on both sides), your requests, your invitations, pending sent or received matches (including those sent to a player without TrackPadel), your notification tokens and your profile photo.</li>
 <li><strong>Blocking an account</strong>: from the friends list or a received request. You are no longer friends, and that account can no longer send you requests, invitations or matches; it is not notified. Your list of blocked accounts (username and photo, to recognise them) is stored with your account, readable only by you, and you can unblock them at any time (Friends &gt; ⋮ &gt; Blocked accounts).</li>
 <li><strong>Reporting an account</strong> (offensive username, inappropriate photo, harassment): the report (your account identifier, the reported account's identifier, its username and photo at that time, the reason and the date) is stored for the TrackPadel team to review; the reported account does not know who reported it. It is erased once handled, at the latest one year later. Offensive usernames are refused when creating an account or changing username.</li>
 </ul>
@@ -198,6 +206,14 @@
 <li><strong>What is sent</strong>: the team line-up (first names and public identifiers of the players), the point-by-point score, how points ended (winner, error, ace…), the place name and the date. <strong>Never sent</strong>: your heart rate, calories, the shots and movements measured by your watch, or the GPS position of the place.</li>
 <li><strong>Where</strong>: in Firestore (europe-west1), readable only by you and your friend while they answer. The matches are erased as soon as they add or decline them, and after 30 days at the latest.</li>
 <li><strong>On your friend's phone</strong>, added matches become theirs: they stay on their phone (and in their backup, if any), like their other matches.</li>
+</ul>
+<h3>Sending their stats to a player who doesn't have TrackPadel (with an account)</h3>
+<ul>
+<li>After a match, you can send a player of that match who doesn't have the app a link to the match (through the messaging app of your choice). Nothing is sent unless you choose to.</li>
+<li><strong>What is sent</strong>: as for a friend, the team line-up (first names, public identifiers of the players who have one), the point-by-point score, how points ended, the place name and the date, plus your username and public identifier. <strong>Never sent</strong>: your heart rate, calories, the shots and movements measured by your watch, or the GPS position of the place.</li>
+<li><strong>Where</strong>: in Firestore (europe-west1), under a secret link that cannot be guessed. <strong>Anyone who has the link can see this match</strong>, without an account: only send it to the player concerned. The match is erased as soon as the player adds it to their history, and after 30 days at the latest (only the fact that it was sent and picked up remains, also erased after 30 days).</li>
+<li><strong>The link</strong> opens a web page (trackpadel.web.app) that measures and keeps nothing, then the app or Google Play. If the player installs the app, Google Play passes the link to it on first launch: their app offers them the match, which they add or ignore.</li>
+<li><strong>You are notified</strong> when the player has added the match. Their app remembers your public identifier (referral).</li>
 </ul>
 <h2>Match location (optional)</h2>
 <p>Off by default (Settings &gt; Privacy &gt; Match location).</p>
