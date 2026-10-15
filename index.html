@@ -28,7 +28,7 @@
 <nav><a href="#fr">Français</a><a href="#en">English</a></nav>
 <section id="fr" lang="fr">
 <h1>Politique de confidentialité — TrackPadel</h1>
-<p><em>Dernière mise à jour : 10 octobre 2026</em></p>
+<p><em>Dernière mise à jour : 15 octobre 2026</em></p>
 <p>TrackPadel compte les points de tes matchs de padel sur ta montre Wear OS et ton téléphone Android. Cette page explique quelles données l'appli utilise, et ce qu'elle en fait.</p>
 <h2>En bref</h2>
 <ul>
@@ -94,6 +94,14 @@
 <li><strong>Le lien</strong> ouvre une page web (trackpadel.web.app) qui ne mesure rien et ne garde rien, puis l'appli ou Google Play. Si le joueur installe l'appli, Google Play lui transmet le lien au premier lancement : son appli lui propose le match, qu'il ajoute ou ignore.</li>
 <li><strong>Tu es prévenu</strong> quand le joueur a ajouté le match. Son appli retient ton identifiant public (parrainage).</li>
 </ul>
+<h3>Parrainage (avec un compte)</h3>
+<ul>
+<li>Quand le joueur qui a reçu ton match crée un compte, il devient ton filleul : le serveur enregistre que ton compte l'a parrainé (vos identifiants de compte, l'envoi concerné, la date).</li>
+<li><strong>Ce qui est compté</strong> : pour devenir actif, l'appli du filleul signale ses matchs terminés comptés avec sa montre (identifiant du match, durée, et le fait que la montre a mesuré). Rien d'autre du match ne part : ni score, ni noms, ni mesures.</li>
+<li><strong>Ce que tu vois</strong> : le nombre de filleuls invités et actifs, jamais leurs matchs. Ton filleul voit son avancement, et tu es prévenu quand il devient actif (son pseudo).</li>
+<li><strong>Récompenses</strong> : mois de Premium offerts, enregistrés avec ton compte. Si tu es abonné, l'appli transmet au serveur le jeton de ton abonnement Google Play pour en repousser l'échéance auprès de Google ; il n'est utilisé qu'à cette fin.</li>
+<li><strong>Où</strong> : dans Firestore (europe-west1), lisible par la Cloud Function seule. <strong>Suppression</strong> : supprimer ton compte efface ton parrainage, tes récompenses et le lien avec tes filleuls.</li>
+</ul>
 <h2>Lieu des matchs (facultatif)</h2>
 <p>Désactivé par défaut (Réglages &gt; Confidentialité &gt; Lieu des matchs).</p>
 <ul>
@@ -149,7 +157,7 @@
 </section>
 <section id="en" lang="en">
 <h1>Privacy policy — TrackPadel</h1>
-<p><em>Last updated: 10 October 2026</em></p>
+<p><em>Last updated: 15 October 2026</em></p>
 <p>TrackPadel keeps score of your padel matches on your Wear OS watch and Android phone. This page explains what data the app uses and what it does with it.</p>
 <h2>In short</h2>
 <ul>
@@ -214,6 +222,14 @@
 <li><strong>Where</strong>: in Firestore (europe-west1), under a secret link that cannot be guessed. <strong>Anyone who has the link can see this match</strong>, without an account: only send it to the player concerned. The match is erased as soon as the player adds it to their history, and after 30 days at the latest (only the fact that it was sent and picked up remains, also erased after 30 days).</li>
 <li><strong>The link</strong> opens a web page (trackpadel.web.app) that measures and keeps nothing, then the app or Google Play. If the player installs the app, Google Play passes the link to it on first launch: their app offers them the match, which they add or ignore.</li>
 <li><strong>You are notified</strong> when the player has added the match. Their app remembers your public identifier (referral).</li>
+</ul>
+<h3>Referrals (with an account)</h3>
+<ul>
+<li>When the player who received your match creates an account, they become your referral: the server records that your account referred them (your account identifiers, the link concerned, the date).</li>
+<li><strong>What is counted</strong>: to become active, the referral's app reports their finished matches tracked with their watch (match identifier, duration, and the fact that the watch measured). Nothing else from the match is sent: no score, names or measurements.</li>
+<li><strong>What you see</strong>: the number of invited and active referrals, never their matches. Your referral sees their own progress, and you are notified when they become active (their username).</li>
+<li><strong>Rewards</strong>: months of Premium offered, stored with your account. If you subscribe, the app sends the server your Google Play subscription token to defer its renewal date with Google; it is used for nothing else.</li>
+<li><strong>Where</strong>: in Firestore (europe-west1), readable by the Cloud Function only. <strong>Deletion</strong>: deleting your account erases your referral, your rewards and the link with your referrals.</li>
 </ul>
 <h2>Match location (optional)</h2>
 <p>Off by default (Settings &gt; Privacy &gt; Match location).</p>
